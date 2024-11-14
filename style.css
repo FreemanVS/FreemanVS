@@ -1,0 +1,131 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 100vw;
+    min-width: 200px;
+    height: 100vh;
+    background: linear-gradient(90deg, orange, rgb(255, 77, 0));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    
+}
+.btn, .btns {
+    padding: 15px 60px;
+    background-color: darkmagenta;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn:hover {
+    scale: 0.9;
+}
+.btn:active {
+    scale: 0.8;
+}
+.card__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 50%;
+    justify-content: space-around;
+}
+.span {
+    width: 30%;
+    aspect-ratio: 1/1;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+}
+.card:hover {
+    scale: 1.1;
+}
+.active {
+    scale: 1.2;
+}
+.card::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(orange, orange, orange, 0.5);
+}
+.text {
+    font-size: 24px;
+}
+.hr {
+    width: 50%;
+    height: 3px;
+    border-bottom: 3px dashed black;
+}
+.card__scissors {
+    background-image: url(./ico/scissors.png);
+}
+.card__paper {
+    background-image: url(./ico/paper.png);
+}
+.card__stone {
+    background-image: url(./ico/stone.png);
+}
+@media (max-width: 600px) {
+    /* .card {width: 50%;   } */
+    .btn, .btns {padding: 5px 10px;
+    font-size: 16px;}
+}
+.box__text {
+    display: flex;
+    gap: 20px;
+}
+.res__user, .res__comp {
+    min-width: 40px;
+    height: 40px;
+    /* display: flex; */
+}
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+.modal__window {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, orange, rgb(255, 77, 0));
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.close__btn {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: blueviolet;
+}
+.modal__active {
+    display: block;
+}
+.wins__count, .loose__count, .count__box {
+    display: flex;
+    font-size: 22px;
+}
