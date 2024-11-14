@@ -9,7 +9,7 @@ const cardAll= document.querySelectorAll(".card"),
       countL = document.querySelector('.countL'),
       btns = document.querySelectorAll('.btns'),
       countgame = document.querySelector('.countgame')
-let res, id, random, win = 0, loose = 0, diff = 3,allgame = 0
+let res, id, random, win = 0, loose = 0, diff = 2,allgame = 0
 
 btns[0].addEventListener('click', ()=> {
   btns[0].style.color = 'black'
