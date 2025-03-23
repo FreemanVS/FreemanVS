@@ -25,4 +25,26 @@ document.addEventListener('mouseup', (event)=> {
     body.style.cursor = 'default'
     active.style.cursor = 'grab'
 })
+let posX ;
+let posY;
+active.addEventListener(  "touchstart",
+    (event) => {
+        const { clientX, clientY } = event.touches[0];	
+        ActiveX = clientX;
+        ActiveY = clientY;
+    }
+  );
 
+document.addEventListener('touchmove', event => {
+	const { clientX, clientY } = event.touches[0];	
+	posX = clientX;
+	posY = clientY;
+    const dx = (posX-ActiveX)*0.5
+    const dy = (posY-ActiveY)*0.5
+    rotateY+=dx*0.5
+    rotateX+=-dy*0.5
+        box.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`
+
+            ActiveX = clientX
+            ActiveY = clientY 
+})
