@@ -118,4 +118,7 @@ body {
     .active__filter, .box {
         scale: 0.4;
     }
+    body {
+        padding: 0px;
+    }
 }
