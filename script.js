@@ -11,8 +11,8 @@ active.addEventListener('mousedown', (event)=> {
 })
 document.addEventListener('mousemove', (event) => {
     if (!isMouseDown) return;
-    const dx = (event.clientX-ActiveX)*0.5
-    const dy = (event.clientY-ActiveY)*0.5
+    const dx = event.clientX-ActiveX
+    const dy = event.clientY-ActiveY
     rotateY+=dx*0.5
     rotateX+=-dy*0.5
         box.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`
