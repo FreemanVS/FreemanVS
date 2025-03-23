@@ -114,3 +114,8 @@ body {
         transform: translateX(1520px);
     }
 }
+@media (max-width: 400px) {
+    .active__filter, .box {
+        scale: 0.4;
+    }
+}
