@@ -11,8 +11,8 @@ active.addEventListener('mousedown', (event)=> {
 })
 document.addEventListener('mousemove', (event) => {
     if (!isMouseDown) return;
-    const dx = event.clientX-ActiveX
-    const dy = event.clientY-ActiveY
+    const dx = (event.clientX-ActiveX)*0.5
+    const dy = (event.clientY-ActiveY)*0.5
     rotateY+=dx*0.5
     rotateX+=-dy*0.5
         box.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`
@@ -39,8 +39,8 @@ document.addEventListener('touchmove', event => {
 	const { clientX, clientY } = event.touches[0];	
 	posX = clientX;
 	posY = clientY;
-    const dx = (posX-ActiveX)*0.5
-    const dy = (posY-ActiveY)*0.5
+    const dx = posX-ActiveX
+    const dy = posY-ActiveY
     rotateY+=dx*0.5
     rotateX+=-dy*0.5
         box.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`
