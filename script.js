@@ -41,8 +41,8 @@ document.addEventListener('touchmove', event => {
 	posY = clientY;
     const dx = posX-ActiveX
     const dy = posY-ActiveY
-    rotateY+=dx*0.5
-    rotateX+=-dy*0.5
+    rotateY+=dx
+    rotateX+=-dy
         box.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`
 
             ActiveX = clientX
